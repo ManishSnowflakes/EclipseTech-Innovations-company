@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - EclipseTech Innovations</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="EclipseTech Innovations offers comprehensive digital solutions including website development, mobile app development, digital marketing, network security, and cloud services to help your business thrive.">
+  <meta name="keywords" content="website development, mobile app development, digital marketing, network security, cloud services, EclipseTech Innovations">
+  <link rel="canonical" href="https://www.eclipsetech.com/services.html">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Services - EclipseTech Innovations">
+  <meta property="og:description" content="Discover our comprehensive digital services designed to transform your business online.">
+  <meta property="og:type" content="website">
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- JSON-LD Structured Data for FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to develop a website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The timeline for website development varies depending on the complexity of the project. A simple business website typically takes 2-4 weeks, while more complex projects may take 6-12 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer ongoing maintenance for websites and apps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer comprehensive maintenance packages that include regular updates, security patches, and technical support to ensure optimal performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What platforms do you develop mobile apps for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We develop native mobile apps for both Android and iOS, as well as cross-platform solutions using technologies like React Native or Flutter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do your digital marketing services work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our digital marketing strategy begins with understanding your business goals and target audience, then implementing a tailored mix of SEO, PPC, social media, and content marketing to drive results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What security measures do you implement for websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We secure websites with multiple layers including SSL, secure authentication, regular updates, firewall protection, malware scanning, and for e-commerce, PCI DSS compliance."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    /* Basic Reset and Font */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    :root {
+      --primary: #3a86ff;
+      --secondary: #8338ec;
+      --dark: #232946;
+      --light: #fffffe;
+      --accent: #ff006e;
+    }
+    body {
+      background-color: #f8f9fa;
+      color: var(--dark);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo span {
+      color: var(--secondary);
+    }
+    .logo-icon {
+      margin-right: 10px;
+      height: 35px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+    }
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(58, 134, 255, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%);
+      padding: 170px 50px 100px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      margin-top: 80px; /* Offset for fixed navbar */
+    }
+    .shape {
+      position: absolute;
+      z-index: 0;
+    }
+    .shape-1 {
+      top: 20%;
+      left: 10%;
+      width: 100px;
+      height: 100px;
+      background: var(--primary);
+      opacity: 0.1;
+      border-radius: 50%;
+      animation: pulse 8s infinite;
+    }
+    .shape-2 {
+      bottom: 10%;
+      right: 15%;
+      width: 150px;
+      height: 150px;
+      background: var(--secondary);
+      opacity: 0.1;
+      border-radius: 50%;
+      animation: pulse 7s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.5); }
+      100% { transform: scale(1); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      color: var(--dark);
+    }
+    .hero-title {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+    .hero-subtitle {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Services Grid */
+    .services-grid {
+      max-width: 1200px;
+      margin: 80px auto 0;
+      padding: 80px 50px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    .service-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    .service-image {
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+    }
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .service-card:hover .service-image img {
+      transform: scale(1.1);
+    }
+    .service-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .service-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
+    }
+    .service-content {
+      padding: 30px;
+    }
+    .service-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--dark);
+    }
+    .service-description {
+      color: #666;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+    .service-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    .service-features li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .service-features li:before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(58, 134, 255, 0.4);
+    }
+    .service-btn {
+      padding: 12px 25px;
+      font-size: 14px;
+    }
+    /* Testimonials Section */
+    .testimonials {
+      background: linear-gradient(135deg, rgba(58,134,255,0.05) 0%, rgba(131,56,236,0.05) 100%);
+      padding: 100px 50px;
+    }
+    .testimonials-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--dark);
+    }
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 60px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      position: relative;
+      text-align: left;
+    }
+    .testimonial-quote {
+      font-size: 40px;
+      color: var(--primary);
+      opacity: 0.2;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .testimonial-content {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    .testimonial-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+    }
+    .testimonial-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .testimonial-role {
+      font-size: 14px;
+      color: #777;
+    }
+    /* FAQ Section */
+    .faq-section {
+      padding: 100px 50px;
+    }
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .faq-question {
+      background: white;
+      padding: 20px 25px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+    .faq-question:after {
+      content: '+';
+      font-size: 20px;
+      color: var(--primary);
+    }
+    .faq-item.active .faq-question:after {
+      content: '-';
+    }
+    .faq-answer {
+      background: #f9f9f9;
+      padding: 0 25px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.active .faq-answer {
+      padding: 20px 25px;
+    }
+    /* Call to Action Section */
+    .cta-section {
+      padding: 100px 50px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      text-align: center;
+    }
+    .cta-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .cta-title {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .cta-text {
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    .cta-btn {
+      background: white;
+      color: var(--primary);
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(58,134,255,0.3);
+    }
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(58,134,255,0.4);
+    }
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 80px 50px 40px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 50px;
+    }
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .footer-description {
+      color: #aaa;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .footer-social {
+      display: flex;
+      gap: 15px;
+    }
+    .footer-social a {
+      color: white;
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    .footer-social a:hover {
+      background: var(--primary);
+      transform: translateY(-5px);
+    }
+    .footer-title {
+      font-size: 18px;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .footer-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--primary);
+    }
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 15px;
+    }
+    .footer-links a {
+      color: #aaa;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 50px;
+      color: #777;
+      font-size: 14px;
+    }
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 20px;
+      }
+      .logo {
+        font-size: 20px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding: 150px 20px 80px;
+      }
+      .hero-title {
+        font-size: 36px;
+      }
+      .hero-subtitle {
+        font-size: 18px;
+      }
+      .services-grid, .testimonials-grid {
+        padding: 50px 20px;
+      }
+      .section-title {
+        font-size: 30px;
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="#3a86ff" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208-93.3 208-208 208z"/>
+        <path fill="#8338ec" d="M256 128c-70.69 0-128 57.31-128 128s57.31 128 128 128 128-57.31 128-128-57.3-128-128-128zm50.39 202.62C289.35 348.12 272.85 352 256 352s-33.35-3.875-50.39-21.38C188.65 313.9 184 295.7 184 256s4.65-57.9 21.61-74.62C222.65 163.9 239.15 160 256 160s33.35 3.875 50.39 21.38C323.35 198.1 328 216.3 328 256s-4.65 57.9-21.61 74.62z"/>
+      </svg>
+      Eclipse<span>Tech</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Our Tech Services</h1>
+      <p class="hero-subtitle">We offer comprehensive digital solutions tailored to your business needs. From website development to cloud services, our team of experts is ready to transform your digital presence.</p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <div class="services-grid">
+    <!-- Service 1: Website Development -->
+    <div class="service-card">
+      <div class="service-image">
+        <img src="web development internship.jpg" alt="Website Development">
+        <div class="service-overlay">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+        </div>
+      </div>
+      <div class="service-content">
+        <h3 class="service-title">Website Development</h3>
+        <p class="service-description">We create stunning, responsive websites that engage visitors and drive conversions. Our websites are built with SEO best practices and cross-browser compatibility in mind.</p>
+        <ul class="service-features">
+          <li>Business Websites & Corporate Portals</li>
+          <li>Web Application Development</li>
+          <li>WordPress, Wix & Shopify Designs</li>
+          <li>E-commerce Development</li>
+        </ul>
+        <a href="#contact" class="btn service-btn">Get Started</a>
+      </div>
+    </div>
+    <!-- Service 2: Mobile App Development -->
+    <div class="service-card">
+      <div class="service-image">
+        <img src="mobile app development.png" alt="Mobile App Development">
+        <div class="service-overlay">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+        </div>
+      </div>
+      <div class="service-content">
+        <h3 class="service-title">Mobile App Development</h3>
+        <p class="service-description">We develop intuitive, high-performance mobile applications that deliver exceptional user experiences across all devices and platforms.</p>
+        <ul class="service-features">
+          <li>Android & iOS Native Development</li>
+          <li>Cross-Platform Solutions</li>
+          <li>Hybrid App Development</li>
+          <li>App Maintenance & Optimization</li>
+        </ul>
+        <a href="#contact" class="btn service-btn">Get Started</a>
+      </div>
+    </div>
+    <!-- Service 3: Digital Marketing -->
+    <div class="service-card">
+      <div class="service-image">
+        <img src="Digital Marketing Services.jpg" alt="Digital Marketing">
+        <div class="service-overlay">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+        </div>
+      </div>
+      <div class="service-content">
+        <h3 class="service-title">Digital Marketing Services</h3>
+        <p class="service-description">Elevate your brand's online presence with our strategic digital marketing services designed to reach your target audience and drive measurable results.</p>
+        <ul class="service-features">
+          <li>Facebook & Instagram Campaigns</li>
+          <li>PPC & Google Ads Management</li>
+          <li>SEO & Content Marketing</li>
+          <li>Social Media Strategy</li>
+        </ul>
+        <a href="#contact" class="btn service-btn">Get Started</a>
+      </div>
+    </div>
+    <!-- Service 4: Network Security -->
+    <div class="service-card">
+      <div class="service-image">
+        <img src="Network Security.jpg" alt="Network Security">
+        <div class="service-overlay">
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+        </div>
+      </div>
+      <div class="service-content">
+        <h3 class="service-title">Network Security</h3>
+        <p class="service-description">Protect your digital assets with our comprehensive network security solutions that safeguard your data and systems from evolving cyber threats.</p>
+        <ul class="service-features">
+          <li>Vulnerability Assessment</li>
+          <li>Firewall & Intrusion Detection</li>
+          <li>24/7 Security Monitoring</li>
+          <li>PCI DSS Compliance</li>
+        </ul>
+        <a href="#contact" class="btn service-btn">Get Started</a>
+      </div>
+    </div>
+    <!-- Service 5: Cloud Services -->
+    <div class="service-card">
+      <div class="service-image">
+        <img src="Cloud Services.png" alt="Cloud Services">
+        <div class="service-overlay">
+          <div class="service-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+        </div>
+      </div>
+      <div class="service-content">
+        <h3 class="service-title">Cloud Services</h3>
+        <p class="service-description">Leverage the power of cloud technology to scale your business operations, enhance collaboration, and reduce IT costs with our tailored cloud solutions.</p>
+        <ul class="service-features">
+          <li>Cloud Migration Strategy</li>
+          <li>AWS, Azure & Google Cloud</li>
+          <li>Cloud Infrastructure Management</li>
+          <li>Disaster Recovery Solutions</li>
+        </ul>
+        <a href="#contact" class="btn service-btn">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="testimonials-container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle">Discover why businesses trust EclipseTech Innovations for their digital transformation needs</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-content">EclipseTech completely transformed our online presence. Their team delivered a stunning e-commerce website that's not only beautiful but also drives real business results. Our conversions have increased by 45% since launch!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-image">
+              <img src="CEO.jpg" alt="Client">
+            </div>
+            <div>
+              <div class="testimonial-name">Sarah Johnson</div>
+              <div class="testimonial-role">CEO, FashionHub</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-content">The mobile app that EclipseTech developed for us has revolutionized how we engage with our customers. Their attention to detail and commitment to user experience sets them apart.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-image">
+              <img src="client.jpg" alt="Client">
+            </div>
+            <div>
+              <div class="testimonial-name">Michael Chen</div>
+              <div class="testimonial-role">CTO, TechStart</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-content">We've seen remarkable growth since implementing EclipseTech's digital marketing strategies. Their expertise in PPC and social media advertising has helped us reach new audiences and increase our ROI significantly.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-image">
+              <img src="CTO.jpg" alt="Client">
+            </div>
+            <div>
+              <div class="testimonial-name">Amanda Torres</div>
+              <div class="testimonial-role">Marketing Director, GreenLife</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Find answers to common questions about our services</p>
+      <div class="faq-item">
+        <div class="faq-question">How long does it take to develop a website?</div>
+        <div class="faq-answer">
+          <p>The timeline for website development varies depending on the complexity of the project. A simple business website typically takes 2-4 weeks, while more complex projects may take 6-12 weeks.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you offer ongoing maintenance for websites and apps?</div>
+        <div class="faq-answer">
+          <p>Yes, we offer comprehensive maintenance packages including regular updates, security patches, performance optimization, and technical support.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What platforms do you develop mobile apps for?</div>
+        <div class="faq-answer">
+          <p>We develop native mobile applications for both Android and iOS, and also offer cross-platform solutions using technologies like React Native or Flutter.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do your digital marketing services work?</div>
+        <div class="faq-answer">
+          <p>Our digital marketing strategy starts with understanding your business goals and target audience, then crafting a customized mix of SEO, PPC, social media, and content marketing to drive results.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What security measures do you implement for websites?</div>
+        <div class="faq-answer">
+          <p>We implement multiple layers of security including SSL certificates, secure authentication, regular updates, firewall protection, and malware scanning. For e-commerce sites, we also ensure PCI DSS compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2 class="cta-title">Ready to Transform Your Business?</h2>
+      <p class="cta-text">Contact us today to discuss how our tech solutions can help your business thrive in the digital landscape.</p>
+      <a href="#contact" class="cta-btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <div class="footer-logo">EclipseTech Innovations</div>
+        <p class="footer-description">We provide cutting-edge digital solutions that empower your business to succeed in the modern marketplace.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="services.html">Website Development</a></li>
+          <li><a href="services.html">Mobile App Development</a></li>
+          <li><a href="services.html">Digital Marketing</a></li>
+          <li><a href="services.html">Network Security</a></li>
+          <li><a href="services.html">Cloud Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact Us</h3>
+        <ul class="footer-links">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Tech Avenue, Innovation District</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-envelope"></i> info@eclipsetech.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 EclipseTech Innovations. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- JavaScript for FAQ Toggle -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach((question) => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle('active');
+        const answer = faqItem.querySelector('.faq-answer');
+        if (faqItem.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+          answer.style.maxHeight = 0;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
